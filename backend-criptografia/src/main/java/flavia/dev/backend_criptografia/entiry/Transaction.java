@@ -12,7 +12,7 @@ import jakarta.persistence.Transient;
 
 @Entity
 @Table(name = "tb_transactions")
-public class Transaction {
+public class Transaction{
 	
 	@Id
     @Column(name = "transaction_id")
