@@ -1,7 +1,15 @@
 package flavia.dev.backend_criptografia.service;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
+import flavia.dev.backend_criptografia.controller.DTO.CreateTransactionRequest;
+import flavia.dev.backend_criptografia.controller.DTO.TransactionResponse;
+import flavia.dev.backend_criptografia.controller.DTO.UpdateTransactionRequest;
+import flavia.dev.backend_criptografia.entiry.Transaction;
 import flavia.dev.backend_criptografia.repository.TransactionRepository;
 
 @Service
@@ -14,7 +22,7 @@ public class TransactionService {
     }
 
     public void create(CreateTransactionRequest request) {
-        var entity = new TransactionEntity();
+        var entity = new Transaction();
         entity.setRawCreditCardToken(request.creditCardToken());
         entity.setRawUserDocument(request.userDocument());
         entity.setTransactionValue(request.value());
@@ -55,4 +63,4 @@ public class TransactionService {
     }
 }
 
-}
+

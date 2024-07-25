@@ -1,5 +1,6 @@
 package flavia.dev.backend_criptografia.entiry;
 
+import flavia.dev.backend_criptografia.service.CryptoService;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
