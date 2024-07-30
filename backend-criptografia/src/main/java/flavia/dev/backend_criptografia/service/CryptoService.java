@@ -1,6 +1,6 @@
 package flavia.dev.backend_criptografia.service;
 
-import org.springframework.stereotype.Service;
+import org.jasypt.util.text.StrongTextEncryptor;
 
 
 public class CryptoService {
